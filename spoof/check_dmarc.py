@@ -6,7 +6,7 @@ class Dmarc:
     def __init__(self, domain):
         self.domain = domain
         self.resolver = dns.resolver.Resolver()
-        self.resolver.nameservers = ['8.8.8.8']
+        self.resolver.nameservers = ["8.8.8.8"]
 
     def check_domain(self):
         try:
@@ -18,5 +18,3 @@ class Dmarc:
         except Exception as e:
             print(f"An Error occurred while checking: {e}")
             return None
-
-
